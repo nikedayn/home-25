@@ -1,0 +1,11 @@
+.footer_menu {
+    display: flex;
+    justify-content: space-between;
+    &_link {
+        color: #000;
+        transition: color 0.3s;
+        &:hover {
+            color: $chekboxColor;
+        }
+    }
+}

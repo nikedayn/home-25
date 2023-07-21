@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>homework 19</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <article class="counters_container">
+                <h2 class="tasks_headline">Tasks</h2>
+                <p class="active_tasks_counter">Active: 3</p>
+                <p class="completed_tasks_counter">Completed: 2</p>
+            </article>
+            <div class="filter_container">
+                <h2 class="filter_headline">Filter by status</h2>
+                <ul class="filter_menu">
+                    <li class="filter_menu_item">
+                        <button class="filter_menu_btn actived">All</button>
+                    </li>
+                    <li class="filter_menu_item">
+                        <button class="filter_menu_btn">Active</button>
+                    </li>
+                    <li class="filter_menu_item">
+                        <button class="filter_menu_btn">Completed</button>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </header>
+    <main>
+        <section class="create_task_section">
+            <div class="container">
+                <input type="text" id="addTaskInput" placeholder="Enter task text...">
+                <button class="add_task_btn">Add Task</button>
+            </div>
+        </section>
+        <section class="tasks_section">
+            <div class="container">
+                <ul class="tasks_menu">
+                    <li class="tasks_menu_item">
+                        <div class="checkbox_and_text">
+                            <input aria-checked="undefined" type="checkbox" name="" class="tasks_menu_input">
+                            <p class="tasks_menu_text">Learn HTML and CSS</p>
+                        </div>
+                        <button class="tasks_menu_btn">
+                            <span></span>
+                        </button>
+                    </li>
+                    <li class="tasks_menu_item">
+                        <div class="checkbox_and_text">
+                            <input type="checkbox" name="" class="tasks_menu_input">
+                            <p class="tasks_menu_text">Get good at JavaScript</p>
+                        </div>
+                        <button class="tasks_menu_btn">
+                            <span></span>
+                        </button>
+                    </li>
+                    <li class="tasks_menu_item">
+                        <div class="checkbox_and_text">
+                            <input type="checkbox" name="" class="tasks_menu_input">
+                            <p class="tasks_menu_text">Master React</p>
+                        </div>
+                        <button class="tasks_menu_btn">
+                            <span></span>
+                        </button>
+                    </li>
+                    <li class="tasks_menu_item">
+                        <div class="checkbox_and_text">
+                            <input type="checkbox" name="" class="tasks_menu_input">
+                            <p class="tasks_menu_text">Discover Redux</p>
+                        </div>
+                        <button class="tasks_menu_btn">
+                            <span></span>
+                        </button>
+                    </li>
+                    <li class="tasks_menu_item">
+                        <div class="checkbox_and_text">
+                            <input type="checkbox" name="" class="tasks_menu_input">
+                            <p class="tasks_menu_text">Build amazing apps</p>
+                        </div>
+                        <button class="tasks_menu_btn">
+                            <span></span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <ul class="footer_menu">
+                <li class="footer_menu">
+                    <a href="#" class="footer_menu_link">About Us</a>
+                </li>
+                <li class="footer_menu">
+                    <a href="#" class="footer_menu_link">Your Tasks</a>
+                </li>
+                <li class="footer_menu">
+                    <a href="#" class="footer_menu_link">Buy VIP</a>
+                </li>
+            </ul> 
+        </div>
+    </footer>
+</body>
+</html>

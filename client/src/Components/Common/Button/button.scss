@@ -1,0 +1,25 @@
+@mixin buttonStyles($width, $height, $padding, $font-size, $font-family, $border-radius, $background-color){
+    width: $width;
+    height: $height;
+    padding: $padding;
+    font-size: $font-size;
+    font-family: $font-family;
+    border-radius: $border-radius;
+    background-color: $background-color;
+}
+
+$chekboxColor: #1E90FF;
+$btnBackground: #DCDCDC;
+
+.filter_menu_btn{
+    @include buttonStyles(auto, 40px, 8px 15px, 16px, 'Akshar', 3px, $btnBackground);
+}
+
+.add_task_btn {
+    @include buttonStyles(93px, 40px, 8px 15px, 16px, 'Akshar', 3px, $btnBackground);
+}
+
+.actived {
+    background-color: $chekboxColor;
+    color: white;
+}

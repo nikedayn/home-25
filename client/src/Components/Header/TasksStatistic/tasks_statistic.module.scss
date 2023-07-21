@@ -1,0 +1,18 @@
+.counters_container {
+    display: flex;
+    flex-direction: column;
+    .tasks_headline {
+        display: inline-block;
+        height: 20px;
+    }
+
+    .active_tasks_counter {
+        display: inline-block;
+        height: 20px;
+    }
+    
+    .completed_tasks_counter {
+        display: inline-block;
+        height: 20px;
+    }
+}

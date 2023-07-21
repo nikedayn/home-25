@@ -1,0 +1,46 @@
+$deleteBtnColor: #FF0000;
+
+.tasks_menu_item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    padding: 20px 0;
+    margin-bottom: 1px;
+    &:last-child {
+        border: none;
+    }
+
+    .checkbox_and_text {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        .tasks_menu_input {
+            opacity:0.8;
+            cursor:pointer;
+            margin-left: 7px;
+            transform:scale(1.8);
+        }
+    }
+}
+
+.tasks_menu_btn {
+    span {
+        width: 20px;
+        height: 2px;
+        display: block;
+        border-radius: 2px;
+        position: relative;
+        transform: rotate(45deg);
+        background-color: $deleteBtnColor;
+        &::after {
+            content: '';
+            width: 20px;
+            height: 2px;
+            display: block;
+            border-radius: 2px;
+            position: absolute;
+            transform: rotate(90deg);
+            background-color: $deleteBtnColor;
+        }
+    }
+}

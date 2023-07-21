@@ -1,0 +1,15 @@
+$chekboxColor: #1E90FF;
+
+#addTaskInput {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 8px;  
+    &:focus {
+        border: none;
+        border-radius: 5px;
+        caret-color: $chekboxColor;
+        outline: solid $chekboxColor 2px;
+    }
+}
