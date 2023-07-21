@@ -4,7 +4,10 @@ const TaskItem = (props) => {
     return(
         <li className={`${s.tasks_menu_item}`}>
             <div className={s.checkbox_and_text}>
-                <input defaultChecked={props.taskInformation.status == 'completed' ? true : false} onClick={()=>{props.changeStatusFunction(props.taskInformation.id, props.taskInformation.status)}} type="checkbox" name="" className={s.tasks_menu_input}/>
+                <input 
+                checked={props.taskInformation.status === 'completed'}
+                onClick={()=>{props.changeStatusFunction(props.taskInformation.id, props.taskInformation.status)}} type="checkbox" name="" className={s.tasks_menu_input}
+                />
                 <p className={s.tasks_menu_text}>{props.taskInformation.text}</p>
             </div>
             <button onClick={()=>{
