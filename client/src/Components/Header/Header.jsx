@@ -1,9 +1,11 @@
 //import стилей
 import './header.scss';
+import FilterContainer from './TasksFilter/filterContainer';
 
 //import компонентов
 import TasksFilter from './TasksFilter/TasksFilter';
 import TasksStatistic from './TasksStatistic/TasksSatistic';
+
 
 //function componet
 const Header = (props) => {
@@ -11,7 +13,7 @@ const Header = (props) => {
         <header>
             <div className="container">
                 <TasksStatistic/>
-                <TasksFilter/>
+                <FilterContainer/>
             </div>
         </header>
     )

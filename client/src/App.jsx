@@ -9,6 +9,7 @@ import Footer from "./Components/Footer/Footer";
 
 //для новых страниц
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import TasksContainer from "./Components/TasksPage/TasksContainer";
 
 const App = () => {
     return(
@@ -16,7 +17,7 @@ const App = () => {
             <BrowserRouter>
                 <Header/>
                 <Routes>
-                    <Route path="/" element={<TasksPage/>}/>
+                    <Route path="/" element={<TasksContainer/>}/>
                 </Routes>
                 <Footer/>
             </BrowserRouter>

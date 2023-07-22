@@ -1,15 +1,10 @@
 import s from './tasks_filter.module.scss';
 
 import Button from '../../Common/Button/Button';
-import { useDispatch, useSelector } from 'react-redux';
-import { changeFilterStatus } from '../../../redux/reducers/tasksReducer';
 
 const TasksFilter = (props) => {
-    let filterStatus = useSelector((state => state.tasksPage.filterStatus));
-    let dispatch = useDispatch();
-
-    const changeFilterStatus = (status) => {
-        dispatch(changeFilterStatus(status));
+    const handleClick = (newFilterText) => {
+        props.changeFilter(newFilterText)
     }
 
     return(
@@ -17,13 +12,31 @@ const TasksFilter = (props) => {
             <h2 className={s.filter_headline}>Filter by status</h2>
             <ul className={s.filter_menu}>
                 <li className={s.filter_menu_item}>
-                    <Button btnFunction={changeFilterStatus} filterStatus={filterStatus} key={'filterBtn0'} class={'filter_menu'} text={'All'}/>
+                    <Button
+                        isActive={props.filter === 'all'}
+                        key={'filterBtn0'} 
+                        class={'filter_menu'} 
+                        text={'All'}
+                        btnFunction={()=>{handleClick('all')}}
+                    />
                 </li>
                 <li className={s.filter_menu_item}>
-                    <Button btnFunction={changeFilterStatus} filterStatus={filterStatus} key={'filterBtn1'} class={'filter_menu'} text={'Active'}/>
+                    <Button
+                        isActive={props.filter === 'active'}
+                        key={'filterBtn1'}
+                        class={'filter_menu'}
+                        text={'Active'}
+                        btnFunction={()=>{handleClick('active')}}
+                    />
                 </li>
                 <li className={s.filter_menu_item}>
-                    <Button btnFunction={changeFilterStatus} filterStatus={filterStatus} key={'filterBtn2'} class={'filter_menu'} text={'Completed'}/>
+                    <Button 
+                        isActive={props.filter === 'completed'}
+                        key={'filterBtn2'}
+                        class={'filter_menu'}
+                        text={'Completed'}
+                        btnFunction={()=>{handleClick('completed')}}
+                    />
                 </li>
             </ul>
         </div>

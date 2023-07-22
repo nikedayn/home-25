@@ -28,35 +28,6 @@ const inititalState = {
             status: 'active'
         },
     ],
-    activeTasks: [
-        {
-            id: nanoid(),
-            text: 'Master React',
-            status: 'active'
-        },
-        {
-            id: nanoid(),
-            text: 'Discover Redux',
-            status: 'active'
-        },
-        {
-            id: nanoid(),
-            text: 'Build amazing apps',
-            status: 'active'
-        }
-    ],
-    completedTasks: [
-        {
-            id: nanoid(),
-            text: 'Learn HTML and CSS',
-            status: 'completed'
-        },
-        {
-            id: nanoid(),
-            text: 'Get good at JavaScript',
-            status: 'completed'
-        }
-    ],
     counters: {
         countTasks: 5,
         countActive: 3,
@@ -87,13 +58,9 @@ export const changeTaskStatus = createAction('tasks/changeStatus', (id, status) 
     }
 }))
 
-export const changeFilterStatus = createAction('tasks/changeFilterStatus', (filterStatus) => ({
-    payload: {
-        filterStatus: filterStatus
-    }
+export const changeFilterStatus = createAction('task/changeFilter', (newStatus) => ({
+    payload: newStatus
 }))
-
-// export const filterTask = createAction('tasks/filter', ())
 
 const tasksReducer = createReducer(inititalState, (builder) => {
     builder.addCase(addTask, (state, action) => {
@@ -180,8 +147,7 @@ const tasksReducer = createReducer(inititalState, (builder) => {
     });
 
     builder.addCase(changeFilterStatus, (state, action) => {
-        console.log(state)
-        state.filterStatus = action.payload.filterStatus;
+        state.filterStatus = action.payload;
     });
 })
 
